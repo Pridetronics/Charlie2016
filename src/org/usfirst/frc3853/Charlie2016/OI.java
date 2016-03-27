@@ -76,10 +76,10 @@ public class OI {
 
         // SmartDashboard Buttons
         SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
-        SmartDashboard.putData("driveForward: TwoFeetSlow", new driveForward(.2, 24));
-        SmartDashboard.putData("driveBackwards: TwoFeetSlow", new driveBackwards(.2, 24));
-        SmartDashboard.putData("turnLeft: Slow90Degrees", new turnLeft(.25, 90));
-        SmartDashboard.putData("turnRight: Slow90Degrees", new turnRight(.2, 90));
+        SmartDashboard.putData("driveForward: TwoFeetSlow", new driveForward(.3, 24));
+        SmartDashboard.putData("driveBackwards: TwoFeetSlow", new driveBackwards(.3, 24));
+        SmartDashboard.putData("turnLeft: Slow90Degrees", new turnLeft(.3, 90));
+        SmartDashboard.putData("turnRight: Slow90Degrees", new turnRight(.3, 90));
         SmartDashboard.putData("stowArm: Slow", new stowArm(.25));
         SmartDashboard.putData("creepArmOffStow", new creepArmOffStow());
         SmartDashboard.putData("setArmPosition: StraightUp", new setArmPosition(45));

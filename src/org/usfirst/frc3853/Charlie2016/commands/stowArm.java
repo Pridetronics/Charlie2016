@@ -39,13 +39,16 @@ public class stowArm extends Command {
 
   // Called just before this Command runs the first time
   protected void initialize() {
+    setTimeout(5);
   }
 
   // Called repeatedly when this Command is scheduled to run
   protected void execute() {
     if (!Robot.arm.isStowed()) {
       Robot.arm.up(m_speed);
-
+    }
+    else{
+      Robot.arm.stop();
     }
   }
 
@@ -57,7 +60,7 @@ public class stowArm extends Command {
       Robot.arm.stop();
       Robot.arm.resetEncoder();
     }
-    return Robot.arm.isStowed();
+    return Robot.arm.isStowed() || isTimedOut();
   }
 
   // Called once after isFinished returns true

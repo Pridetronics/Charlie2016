@@ -62,8 +62,8 @@ public class DriveTrain extends Subsystem {
     return Math.PI * track / 360;
   }
 
-  public void driveTank(Joystick leftStick, Joystick rightStick) {
-    robotDrive21.tankDrive(leftStick, rightStick, true);
+  public void driveTank(double d, double e) {
+    robotDrive21.tankDrive(d, e, true);
 
   }
 

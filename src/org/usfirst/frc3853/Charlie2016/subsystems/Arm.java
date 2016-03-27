@@ -62,7 +62,7 @@ public class Arm extends Subsystem {
 
     // set the motor speed and direction
     if (!isStowed()){
-      armMotor.set(speed);
+      armMotor.set(-speed);
     }
     else{
       armMotor.set(0);
@@ -82,7 +82,7 @@ public class Arm extends Subsystem {
     }
 
     // set the motor speed and direction
-    armMotor.set(-speed);
+    armMotor.set(speed);
 
   }
 

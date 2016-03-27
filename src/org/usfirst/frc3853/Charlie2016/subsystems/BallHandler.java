@@ -47,7 +47,7 @@ public class BallHandler extends Subsystem {
   }
 
   public boolean ballPresent() {
-    return ballPresentSwitch.get();
+    return !ballPresentSwitch.get();
   }
 
   public void stop() {
@@ -61,7 +61,7 @@ public class BallHandler extends Subsystem {
       speed = 1;
     }
 
-    ballMotor.set(-speed);
+    ballMotor.set(speed);
   }
 
   public void out(double speed) {
@@ -71,6 +71,6 @@ public class BallHandler extends Subsystem {
       speed = 1;
     }
 
-    ballMotor.set(speed);
+    ballMotor.set(-speed);
   }
 }

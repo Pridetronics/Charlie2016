@@ -65,7 +65,7 @@ public class RobotMap {
         driveTrainLeftDriveEncoder.setPIDSourceType(PIDSourceType.kDisplacement);
         driveTrainrightDriveEncoder = new Encoder(5, 6, false, EncodingType.k1X);
         LiveWindow.addSensor("DriveTrain", "rightDriveEncoder", driveTrainrightDriveEncoder);
-        driveTrainrightDriveEncoder.setDistancePerPulse(0.0523);
+        driveTrainrightDriveEncoder.setDistancePerPulse(0.052);
         driveTrainrightDriveEncoder.setPIDSourceType(PIDSourceType.kDisplacement);
         armarmMotor = new Talon(8);
         LiveWindow.addActuator("Arm", "armMotor", (Talon) armarmMotor);
@@ -75,7 +75,7 @@ public class RobotMap {
         
         armarmEncoder = new Encoder(0, 1, false, EncodingType.k1X);
         LiveWindow.addSensor("Arm", "armEncoder", armarmEncoder);
-        armarmEncoder.setDistancePerPulse(1.0);
+        armarmEncoder.setDistancePerPulse(0.724);
         armarmEncoder.setPIDSourceType(PIDSourceType.kDisplacement);
         ballHandlerballMotor = new Talon(9);
         LiveWindow.addActuator("BallHandler", "ballMotor", (Talon) ballHandlerballMotor);
