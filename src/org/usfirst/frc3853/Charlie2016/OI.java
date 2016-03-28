@@ -77,7 +77,7 @@ public class OI {
         // SmartDashboard Buttons
         SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
         SmartDashboard.putData("driveForwardDistance: TwoFeetSlow", new driveForwardDistance(.7, 24));
-        SmartDashboard.putData("DriveForwardTime: SlowTwoSeconds", new DriveForwardTime(.5, 2));
+        SmartDashboard.putData("DriveForwardTime: SlowTwoSeconds", new driveForwardTime(.5, 2));
         SmartDashboard.putData("driveBackwardsDistance: TwoFeetSlow", new driveBackwardsDistance(.7, 24));
         SmartDashboard.putData("driveBackwardTime: SlowTwoSeconds", new driveBackwardTime(.5, 2));
         SmartDashboard.putData("turnLeftDegrees: Slow90Degrees", new turnLeftDegrees(.7, 90));
