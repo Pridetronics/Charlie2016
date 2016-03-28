@@ -479,6 +479,31 @@ Children:
         validators: null
         value:
         - !!robotbuilder.data.properties.ParameterDescriptor {name: speed, type: double}
+        - !!robotbuilder.data.properties.ParameterDescriptor {name: seconds, type: double}
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: DriveTrain}
+      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
+        default: []
+        name: Parameter presets
+        validators: null
+        value:
+        - !!robotbuilder.data.properties.ParameterSet
+          name: SlowTwoSeconds
+          parameters:
+          - {name: speed, type: double, value: '.5'}
+          - {name: seconds, type: double, value: '2'}
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: true}
+    Base: Command
+    Name: DriveForwardTime
+  - Children: []
+    Properties:
+      Parameters: !!robotbuilder.data.properties.ParametersProperty
+        default: []
+        name: Parameters
+        validators: null
+        value:
+        - !!robotbuilder.data.properties.ParameterDescriptor {name: speed, type: double}
         - !!robotbuilder.data.properties.ParameterDescriptor {name: distance, type: double}
       Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
         name: Requires, type: Subsystem, validators: null, value: DriveTrain}
@@ -496,6 +521,31 @@ Children:
         name: Button on SmartDashboard, validators: null, value: true}
     Base: Command
     Name: driveBackwardsDistance
+  - Children: []
+    Properties:
+      Parameters: !!robotbuilder.data.properties.ParametersProperty
+        default: []
+        name: Parameters
+        validators: null
+        value:
+        - !!robotbuilder.data.properties.ParameterDescriptor {name: speed, type: double}
+        - !!robotbuilder.data.properties.ParameterDescriptor {name: seconds, type: double}
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: DriveTrain}
+      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
+        default: []
+        name: Parameter presets
+        validators: null
+        value:
+        - !!robotbuilder.data.properties.ParameterSet
+          name: SlowTwoSeconds
+          parameters:
+          - {name: speed, type: double, value: '.5'}
+          - {name: seconds, type: double, value: '2'}
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: true}
+    Base: Command
+    Name: driveBackwardTime
   - Children: []
     Properties:
       Parameters: !!robotbuilder.data.properties.ParametersProperty
@@ -591,6 +641,31 @@ Children:
         validators: null
         value:
         - !!robotbuilder.data.properties.ParameterDescriptor {name: speed, type: double}
+        - !!robotbuilder.data.properties.ParameterDescriptor {name: seconds, type: double}
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: DriveTrain}
+      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
+        default: []
+        name: Parameter presets
+        validators: null
+        value:
+        - !!robotbuilder.data.properties.ParameterSet
+          name: SlowTwoSeconds
+          parameters:
+          - {name: speed, type: double, value: '0.7'}
+          - {name: seconds, type: double, value: '2'}
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: true}
+    Base: Command
+    Name: turnLeftTime
+  - Children: []
+    Properties:
+      Parameters: !!robotbuilder.data.properties.ParametersProperty
+        default: []
+        name: Parameters
+        validators: null
+        value:
+        - !!robotbuilder.data.properties.ParameterDescriptor {name: speed, type: double}
         - !!robotbuilder.data.properties.ParameterDescriptor {name: degrees, type: int}
       Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
         name: Requires, type: Subsystem, validators: null, value: DriveTrain}
@@ -608,6 +683,93 @@ Children:
         name: Button on SmartDashboard, validators: null, value: true}
     Base: Command
     Name: turnRightDegrees
+  - Children: []
+    Properties:
+      Parameters: !!robotbuilder.data.properties.ParametersProperty
+        default: []
+        name: Parameters
+        validators: null
+        value:
+        - !!robotbuilder.data.properties.ParameterDescriptor {name: speed, type: double}
+        - !!robotbuilder.data.properties.ParameterDescriptor {name: seconds, type: double}
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: DriveTrain}
+      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
+        default: []
+        name: Parameter presets
+        validators: null
+        value:
+        - !!robotbuilder.data.properties.ParameterSet
+          name: SlowTwoSeconds
+          parameters:
+          - {name: speed, type: double, value: '.7'}
+          - {name: seconds, type: double, value: '2'}
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: true}
+    Base: Command
+    Name: turnRightTime
+  - Children: []
+    Properties:
+      Parameters: !!robotbuilder.data.properties.ParametersProperty
+        default: []
+        name: Parameters
+        validators: null
+        value:
+        - !!robotbuilder.data.properties.ParameterDescriptor {name: speed, type: double}
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: Arm}
+      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
+        default: []
+        name: Parameter presets
+        validators: null
+        value:
+        - !!robotbuilder.data.properties.ParameterSet
+          name: Quarter
+          parameters:
+          - {name: speed, type: double, value: '.25'}
+        - !!robotbuilder.data.properties.ParameterSet
+          name: Half
+          parameters:
+          - {name: speed, type: double, value: '.5'}
+        - !!robotbuilder.data.properties.ParameterSet
+          name: Full
+          parameters:
+          - {name: speed, type: double, value: '1'}
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: false}
+    Base: Command
+    Name: moveArmUp
+  - Children: []
+    Properties:
+      Parameters: !!robotbuilder.data.properties.ParametersProperty
+        default: []
+        name: Parameters
+        validators: null
+        value:
+        - !!robotbuilder.data.properties.ParameterDescriptor {name: speed, type: double}
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: Arm}
+      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
+        default: []
+        name: Parameter presets
+        validators: null
+        value:
+        - !!robotbuilder.data.properties.ParameterSet
+          name: Quarter
+          parameters:
+          - {name: speed, type: double, value: '.25'}
+        - !!robotbuilder.data.properties.ParameterSet
+          name: Half
+          parameters:
+          - {name: speed, type: double, value: '.5'}
+        - !!robotbuilder.data.properties.ParameterSet
+          name: Full
+          parameters:
+          - {name: speed, type: double, value: '1'}
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: false}
+    Base: Command
+    Name: moveArmDown
   - Children: []
     Properties: &id017
       Parameters: !!robotbuilder.data.properties.ParametersProperty
@@ -799,168 +961,6 @@ Children:
         name: Button on SmartDashboard, validators: null, value: true}
     Base: Command Group
     Name: calibrateArmEncoder
-  - Children: []
-    Properties:
-      Parameters: !!robotbuilder.data.properties.ParametersProperty
-        default: []
-        name: Parameters
-        validators: null
-        value:
-        - !!robotbuilder.data.properties.ParameterDescriptor {name: speed, type: double}
-      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-        name: Requires, type: Subsystem, validators: null, value: Arm}
-      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
-        default: []
-        name: Parameter presets
-        validators: null
-        value:
-        - !!robotbuilder.data.properties.ParameterSet
-          name: Quarter
-          parameters:
-          - {name: speed, type: double, value: '.25'}
-        - !!robotbuilder.data.properties.ParameterSet
-          name: Half
-          parameters:
-          - {name: speed, type: double, value: '.5'}
-        - !!robotbuilder.data.properties.ParameterSet
-          name: Full
-          parameters:
-          - {name: speed, type: double, value: '1'}
-      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
-        name: Button on SmartDashboard, validators: null, value: false}
-    Base: Command
-    Name: moveArmUp
-  - Children: []
-    Properties:
-      Parameters: !!robotbuilder.data.properties.ParametersProperty
-        default: []
-        name: Parameters
-        validators: null
-        value:
-        - !!robotbuilder.data.properties.ParameterDescriptor {name: speed, type: double}
-      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-        name: Requires, type: Subsystem, validators: null, value: Arm}
-      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
-        default: []
-        name: Parameter presets
-        validators: null
-        value:
-        - !!robotbuilder.data.properties.ParameterSet
-          name: Quarter
-          parameters:
-          - {name: speed, type: double, value: '.25'}
-        - !!robotbuilder.data.properties.ParameterSet
-          name: Half
-          parameters:
-          - {name: speed, type: double, value: '.5'}
-        - !!robotbuilder.data.properties.ParameterSet
-          name: Full
-          parameters:
-          - {name: speed, type: double, value: '1'}
-      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
-        name: Button on SmartDashboard, validators: null, value: false}
-    Base: Command
-    Name: moveArmDown
-  - Children: []
-    Properties:
-      Parameters: !!robotbuilder.data.properties.ParametersProperty
-        default: []
-        name: Parameters
-        validators: null
-        value:
-        - !!robotbuilder.data.properties.ParameterDescriptor {name: speed, type: double}
-        - !!robotbuilder.data.properties.ParameterDescriptor {name: seconds, type: double}
-      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-        name: Requires, type: Subsystem, validators: null, value: DriveTrain}
-      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
-        default: &id023
-        - !!robotbuilder.data.properties.ParameterSet
-          name: SlowTwoSeconds
-          parameters:
-          - {name: speed, type: double, value: '.5'}
-          - {name: seconds, type: double, value: '2'}
-        name: Parameter presets
-        validators: null
-        value: *id023
-      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
-        name: Button on SmartDashboard, validators: null, value: true}
-    Base: Command
-    Name: DriveForwardTime
-  - Children: []
-    Properties:
-      Parameters: !!robotbuilder.data.properties.ParametersProperty
-        default: []
-        name: Parameters
-        validators: null
-        value:
-        - !!robotbuilder.data.properties.ParameterDescriptor {name: speed, type: double}
-        - !!robotbuilder.data.properties.ParameterDescriptor {name: seconds, type: double}
-      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-        name: Requires, type: Subsystem, validators: null, value: DriveTrain}
-      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
-        default: &id024
-        - !!robotbuilder.data.properties.ParameterSet
-          name: SlowTwoSeconds
-          parameters:
-          - {name: speed, type: double, value: '.5'}
-          - {name: seconds, type: double, value: '2'}
-        name: Parameter presets
-        validators: null
-        value: *id024
-      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
-        name: Button on SmartDashboard, validators: null, value: true}
-    Base: Command
-    Name: driveBackwardTime
-  - Children: []
-    Properties:
-      Parameters: !!robotbuilder.data.properties.ParametersProperty
-        default: []
-        name: Parameters
-        validators: null
-        value:
-        - !!robotbuilder.data.properties.ParameterDescriptor {name: speed, type: double}
-        - !!robotbuilder.data.properties.ParameterDescriptor {name: seconds, type: double}
-      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-        name: Requires, type: Subsystem, validators: null, value: DriveTrain}
-      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
-        default: &id025
-        - !!robotbuilder.data.properties.ParameterSet
-          name: SlowTwoSeconds
-          parameters:
-          - {name: speed, type: double, value: '0.5'}
-          - {name: seconds, type: double, value: '2'}
-        name: Parameter presets
-        validators: null
-        value: *id025
-      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
-        name: Button on SmartDashboard, validators: null, value: true}
-    Base: Command
-    Name: turnLeftTime
-  - Children: []
-    Properties:
-      Parameters: !!robotbuilder.data.properties.ParametersProperty
-        default: []
-        name: Parameters
-        validators: null
-        value:
-        - !!robotbuilder.data.properties.ParameterDescriptor {name: speed, type: double}
-        - !!robotbuilder.data.properties.ParameterDescriptor {name: seconds, type: double}
-      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-        name: Requires, type: Subsystem, validators: null, value: DriveTrain}
-      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
-        default: &id026
-        - !!robotbuilder.data.properties.ParameterSet
-          name: SlowTwoSeconds
-          parameters:
-          - {name: speed, type: double, value: '.5'}
-          - {name: seconds, type: double, value: '2'}
-        name: Parameter presets
-        validators: null
-        value: *id026
-      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
-        name: Button on SmartDashboard, validators: null, value: true}
-    Base: Command
-    Name: turnRightTime
   Properties: {}
   Base: Commands
   Name: Commands

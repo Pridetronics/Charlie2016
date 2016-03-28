@@ -98,7 +98,7 @@ public class DriveTrain extends Subsystem {
     if (speed > 1) {
       speed = 1;
     }
-    robotDrive21.tankDrive(speed, -speed);
+    robotDrive21.tankDrive(-speed, speed);
   }
 
   public void turnLeft(double speed) {
@@ -107,7 +107,7 @@ public class DriveTrain extends Subsystem {
     if (speed > 1) {
       speed = 1;
     }
-    robotDrive21.tankDrive(-speed, speed);
+    robotDrive21.tankDrive(speed, -speed);
 
   }
 
