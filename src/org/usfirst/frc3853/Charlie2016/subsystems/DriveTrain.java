@@ -42,7 +42,6 @@ public class DriveTrain extends Subsystem {
 
   private final double track = 14; // set to the track distance in inches
 
-
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
@@ -70,8 +69,6 @@ public class DriveTrain extends Subsystem {
   public void driveArccade(Joystick stick) {
     robotDrive21.arcadeDrive(stick, true);
   }
-
- 
 
   public void zeroEncoders() {
     leftDriveEncoder.reset();
@@ -101,9 +98,7 @@ public class DriveTrain extends Subsystem {
     if (speed > 1) {
       speed = 1;
     }
-
-    leftMotor.set(speed);
-    rightMotor.set(-speed);
+    robotDrive21.tankDrive(speed, -speed);
   }
 
   public void turnLeft(double speed) {
@@ -112,9 +107,8 @@ public class DriveTrain extends Subsystem {
     if (speed > 1) {
       speed = 1;
     }
+    robotDrive21.tankDrive(-speed, speed);
 
-    leftMotor.set(-speed);
-    rightMotor.set(speed);
   }
 
   public void forward(double speed) {
@@ -124,8 +118,7 @@ public class DriveTrain extends Subsystem {
       speed = 1;
     }
 
-    leftMotor.set(speed);
-    rightMotor.set(speed);
+    robotDrive21.tankDrive(-speed, -speed);
   }
 
   public void backward(double speed) {
@@ -135,7 +128,6 @@ public class DriveTrain extends Subsystem {
       speed = 1;
     }
 
-    leftMotor.set(-speed);
-    rightMotor.set(-speed);
+    robotDrive21.tankDrive(speed, speed);
   }
 }

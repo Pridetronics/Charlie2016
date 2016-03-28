@@ -43,7 +43,7 @@ public class creepArmOffStow extends Command {
   // Called repeatedly when this Command is scheduled to run
   protected void execute() {
     if (Robot.arm.isStowed()) {
-      Robot.arm.down(.25);
+      Robot.arm.down(.3);
     }
   }
 
