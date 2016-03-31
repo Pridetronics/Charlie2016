@@ -67,17 +67,17 @@ public class OI {
         buttonB = new JoystickButton(gamePad0, 2);
         buttonB.whenPressed(new shootBall(1));
         buttonX = new JoystickButton(gamePad0, 3);
-        buttonX.whenPressed(new intakeBall(.5));
+        buttonX.whenPressed(new intakeBall(1));
         buttonA = new JoystickButton(gamePad0, 1);
-        buttonA.whileHeld(new moveArmUp(.25));
+        buttonA.whileHeld(new moveArmUp(.5));
         buttonY = new JoystickButton(gamePad0, 4);
-        buttonY.whileHeld(new moveArmDown(.25));
+        buttonY.whileHeld(new moveArmDown(.5));
 
 
         // SmartDashboard Buttons
         SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
         SmartDashboard.putData("driveForwardDistance: TwoFeetSlow", new driveForwardDistance(.7, 24));
-        SmartDashboard.putData("DriveForwardTime: SlowTwoSeconds", new driveForwardTime(.5, 2));
+        SmartDashboard.putData("driveForwardTime: SlowTwoSeconds", new driveForwardTime(.5, 2));
         SmartDashboard.putData("driveBackwardsDistance: TwoFeetSlow", new driveBackwardsDistance(.7, 24));
         SmartDashboard.putData("driveBackwardTime: SlowTwoSeconds", new driveBackwardTime(.5, 2));
         SmartDashboard.putData("turnLeftDegrees: Slow90Degrees", new turnLeftDegrees(.7, 90));

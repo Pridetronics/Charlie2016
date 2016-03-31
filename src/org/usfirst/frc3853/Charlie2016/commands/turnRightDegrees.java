@@ -64,7 +64,7 @@ public class turnRightDegrees extends Command {
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
       return (Math.abs(Robot.driveTrain.getRightDistance()) >= m_distance)
-          || Math.abs(Robot.driveTrain.getLeftDistance()) < m_distance || isTimedOut();
+          || Math.abs(Robot.driveTrain.getLeftDistance()) >= m_distance || isTimedOut();
     }
 
     // Called once after isFinished returns true
