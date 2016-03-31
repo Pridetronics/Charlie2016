@@ -44,8 +44,13 @@ public class moveArmDown extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-      Robot.arm.down(-m_speed);
-   
+      // soft limit using encoder
+      if (Robot.arm.getEncoder() < 145){
+        Robot.arm.down(m_speed);
+      }
+      else{
+        Robot.arm.stop();
+      }
     }
 
     // Make this return true when this Command no longer needs to run execute()
